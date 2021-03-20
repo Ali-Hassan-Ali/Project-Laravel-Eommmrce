@@ -1,0 +1,312 @@
+@media screen and (max-width: 1199px) {
+	
+}
+@media screen and (max-width: 991px) {
+	.menu-st, .login-btn{
+        display: none;
+	}
+    .logo-site {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    .logo-site img {
+        max-width: 150px;
+    }
+    .header-middle {
+        padding: 30px 0 0;
+    }
+    .form-search-head {
+        margin-top: 20px;
+    }
+    .menu-purches > li {
+        position: absolute;
+        top: -85px;
+    }
+    .title-basket {
+        display: none;
+    }
+	.hamburger{
+		display: block;
+        top: -105px;
+        right:15px;
+	}
+	.menu-mobile .dropdown-menu{
+		width: 100%;
+	    box-shadow: none;
+	    border: 0;
+	    border-radius: 0;
+	    padding: 0;
+        position: static !important;
+        transform: initial !important;
+	    margin-bottom: 0px;
+	    margin-top: 0;
+	    float: none;
+	}
+	.mmenu > ul li.dropdown ul > li > a{
+		color: #252525;
+		padding: 6px 10px;
+	}
+	.mmenu > ul li.dropdown ul > li > a:hover{
+		color: #fff;
+	}
+	.mmenu > ul li.dropdown > a{
+		padding-left: 40px;
+	}
+	.mmenu > ul li.dropdown > a:before{
+		font-family: FontAwesome;
+		content: "\f107";
+		font-size: 14px;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		font-size: 20px;
+	}
+    .mmenu li img {
+        width: 22px;
+        margin: 0 5px;
+    }
+	.dropdown-menu-sub{
+		display: none;
+	}
+	.dropdown-submenu > a.test:before{
+		font-family: FontAwesome;
+		content: "\f107";
+		font-size: 14px;
+		position: absolute;
+		top: 4px;
+		right: 7px;
+		font-size: 20px;
+	}
+	.mmenu > ul li.dropdown ul > li > a{
+        padding: 10px 40px;
+        text-align: right;
+	}
+	.dropdown-submenu ul.dropdown-menu li{
+		margin: 0;
+		padding: 0;
+	}
+	.mmenu > ul li.dropdown ul.dropdown-menu li.dropdown-submenu li > a{
+		padding:10px;
+		padding-left: 20px;
+	}
+    .section_home {
+        padding: 20px 0;
+        position: relative;
+        width: 100%;
+    }
+    .home_txt .sec-title {
+        position: relative;
+        width: 100%;
+        padding-left: 0;
+    }
+    .section_best_sellers {
+        margin-top: 0;
+        padding: 40px 0;
+    }
+    .section_what_site .col-md-3 {
+        width: 50%;
+    }
+    .box-callouts {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .section_what_site .sec_head {
+        width: 100%;
+    }
+    .section_subscriber_ratings .col-md-8 {
+        width: 100%
+    }
+    .section_subscriber_ratings .col-md-4 {
+        display: none;
+    }
+    .section_about {
+        padding: 0;
+    }
+    .flex-about {
+        display: block;
+    }
+    .img-about, .shape-about {
+        display: none;
+    }
+    .title-about {
+        width: 100%;
+        display: block;
+    }
+    .video-about {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .head-about {
+        position: initial;
+        margin: 0 20px;
+    }
+    .head-about p {
+        position: relative;
+        transform: initial;
+    }
+    .head-about p:before {
+        right: 0;
+        transform: initial;
+    }
+    .section_download_app {
+        background: linear-gradient(180deg, rgba(25,154,254,1) 0%, rgba(143,6,250,1) 100%);
+    }
+    .img-download {
+        display: none;
+    }
+    .title-download {
+        width: 100%;
+        color: #fff;
+    }
+    .title-download span {
+        margin-bottom: 15px;
+        display: block;
+    }
+    .menu-ft li {
+        margin: 10px;
+        width: 35%;
+    }
+    .menu-ft {
+        flex-wrap: wrap;
+    }
+    .list-contact {
+        margin: 20px 0;
+    }
+    .list-contact li {
+        display: flex;
+        flex-direction: initial;
+    }
+    .breadcrumb-bar {
+        padding-top: 0;
+    }
+    .section_content_about {
+        padding: 0;
+    }
+    .content_about {
+        display: block;
+        align-content: center;
+    }
+    .content_about .img_about {
+        width: 100%;
+    }
+    .content_about .sec_head {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .table-site {
+        width: 100%;
+    }
+    .tabel-cart tr td {
+        display: none;
+    }
+    .tabel-cart tr td:first-child {
+        width: 100%;
+        display: block;
+    }
+    .boc-pr figure {
+        height: 120px;
+        width: 130px;
+    }
+    .data-mobail {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .quantity-item {
+        margin-right: 0;
+        display: inline-block;
+    }
+    .data-mobail p {
+        margin: 0 15px 5px;
+    }
+    .remove-pr {
+        position: absolute;
+        right: 130px;
+        bottom: 0px;
+        background: #fff;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tabel-cart th {
+        display: none;
+    }
+    .table-site {
+        border-top: 5px solid #3929aa;
+    }
+    .section_st_page {
+        padding: 0px;
+    }
+    .box-img-contact {
+        display: none;
+    }
+    .form-contact, .list-faq {
+        width: 100%;
+    }
+    .section_page_site:before {
+        display: none;
+    }
+    .section_payment {
+        padding: 0;
+    }
+    .option-payment {
+        display: block;
+        padding-right: 0;
+    }
+    .option-payment li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .content-payment .nav-tabs {
+        display: block;
+        width: 100%;
+    }
+    .tab-content {
+        padding: 30px;
+        margin: 40px 0;
+    }
+    .content-st_page > span {
+        padding: 0;
+    }
+    .content-details {
+        display: block;
+    }
+    .content-details .card-product, .title-product, .img-product {
+        width: 100%;
+    }
+    .main-data {
+        width: 100%;
+        padding: 0 30px 80px;
+    }
+    .fl-setting {
+        display: block;
+    }
+    .fl-setting .switch-settings {
+        width: 100%;
+    }
+    .total-balance p {
+        display: flex;
+    }
+    
+}
+@media screen and (min-width: 768px) {
+	
+}
+@media screen and (max-width: 767px) {
+	
+}
+@media screen and (min-width: 601px) {
+	
+}
+@media screen and (max-width: 600px) {
+	.
+	
+}
+@media screen and (max-width: 450px) {
+	
+	
+}

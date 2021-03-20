@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="37" viewBox="0 0 118 37">
+  <g id="Group_39660" data-name="Group 39660" transform="translate(-757 -619)">
+    <rect id="Rectangle_7857" data-name="Rectangle 7857" width="118" height="37" rx="4" transform="translate(757 619)" fill="#231f20"/>
+    <g id="Group_3078" data-name="Group 3078" transform="translate(757.02 621.741)">
+      <g id="Group_3054" data-name="Group 3054" transform="translate(38.09 3.299)">
+        <text id="Available_on_the" data-name="Available on the" transform="translate(0 6)" fill="#fff" font-size="6" font-family="SFCompactDisplay-Medium, SF Display" font-weight="500"><tspan x="0" y="0">Available on the</tspan></text>
+        <text id="App_Store" data-name="App Store" transform="translate(0 21.098)" fill="#fff" font-size="14" font-family="SFCompactDisplay-Medium, SF Display" font-weight="500"><tspan x="0" y="0">App Store</tspan></text>
+      </g>
+      <g id="apple-logo" transform="translate(8.649 6.591)">
+        <g id="Group_3056" data-name="Group 3056" transform="translate(0 0)">
+          <path id="Path_3962" data-name="Path 3962" d="M55.175,116.865a5.082,5.082,0,0,1-.921-2.976,4.756,4.756,0,0,1,.867-2.763,8.648,8.648,0,0,1,1.522-1.575,6.882,6.882,0,0,0-1.388-1.335,4.88,4.88,0,0,0-2.843-.867,7.532,7.532,0,0,0-2.309.454,6.684,6.684,0,0,1-1.909.454,8.586,8.586,0,0,1-1.842-.4,8.879,8.879,0,0,0-2.362-.4,4.608,4.608,0,0,0-3.79,1.922,7.919,7.919,0,0,0-1.508,4.992,13.683,13.683,0,0,0,1.962,6.713q1.989,3.457,4.017,3.457a4.825,4.825,0,0,0,1.762-.454,5.144,5.144,0,0,1,1.9-.44,5.9,5.9,0,0,1,2.015.427,6.171,6.171,0,0,0,1.869.427q1.708,0,3.43-2.616a12.883,12.883,0,0,0,1.642-3.337A4.06,4.06,0,0,1,55.175,116.865Z" transform="translate(-38.692 -102.331)" fill="#fff"/>
+          <path id="Path_3963" data-name="Path 3963" d="M236.515,4.218a5.478,5.478,0,0,0,1.241-1.842A5.091,5.091,0,0,0,238.143.56c0-.035,0-.08-.007-.133s-.006-.1-.006-.133A1.278,1.278,0,0,1,238.1.147,1.24,1.24,0,0,0,238.063,0a5.32,5.32,0,0,0-3.337,1.975,6.087,6.087,0,0,0-1.041,3.43,7.459,7.459,0,0,0,1.388-.227A3.782,3.782,0,0,0,236.515,4.218Z" transform="translate(-224.57 0)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

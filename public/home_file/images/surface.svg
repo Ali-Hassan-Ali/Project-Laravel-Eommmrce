@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.015" height="19.015" viewBox="0 0 19.015 19.015">
+  <g id="surface1" transform="translate(0.1 0.1)">
+    <path id="Path_765" data-name="Path 765" d="M15.679,3.322V1.568A1.57,1.57,0,0,0,14.111,0H1.568A1.57,1.57,0,0,0,0,1.568v6.9a1.565,1.565,0,0,0,1.406,1.552l1.179,3.06a1.568,1.568,0,0,0,2.027.9l7.361-2.836a4.533,4.533,0,0,0,.391,4.025l.18.288V18.5a.313.313,0,0,0,.314.314H18.5a.313.313,0,0,0,.314-.314V8.15a4.1,4.1,0,0,0-1.2-2.89Zm0,1.875.952,2.471a.941.941,0,0,1-.54,1.216l-.544.21a1.568,1.568,0,0,0,.132-.627ZM.627,8.467v-6.9A.941.941,0,0,1,1.568.627H14.111a.941.941,0,0,1,.941.941V3.561h0l0,.007v4.9a.952.952,0,0,1-.021.162L12.158,5.756A1.673,1.673,0,0,0,9.744,8.07l1.225,1.337h-9.4A.941.941,0,0,1,.627,8.467Zm4.017,1.568-2.23.858-.33-.858Zm-.258,3.358a.941.941,0,0,1-1.216-.54l-.529-1.376,3.743-1.442v0h5.159l.408.444Zm13.8,4.8H13.17V15.679h5.017Zm0-3.136H13.031l-.136-.217a3.91,3.91,0,0,1-.079-4.016.313.313,0,0,0-.041-.368l-2.57-2.8A1.046,1.046,0,0,1,11.715,6.2l5,5,.443-.443-1.16-1.16.322-.125a1.568,1.568,0,0,0,.9-2.026L16.154,4.686,17.17,5.7A3.473,3.473,0,0,1,18.188,8.15Zm0,0" fill="#535353" stroke="#535353" stroke-width="0.2"/>
+    <path id="Path_766" data-name="Path 766" d="M64.82,65.636a.815.815,0,0,0,.815-.815V63.315a.815.815,0,0,0-.815-.815H63.315a.815.815,0,0,0-.815.815V64.82a.815.815,0,0,0,.815.815Z" transform="translate(-61.246 -61.246)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_767" data-name="Path 767" d="M78.125,265.625h1.254v.627H78.125Zm0,0" transform="translate(-76.557 -260.294)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_768" data-name="Path 768" d="M78.125,359.375h1.254V360H78.125Zm0,0" transform="translate(-76.557 -352.163)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_769" data-name="Path 769" d="M359.375,359.375h1.254V360h-1.254Zm0,0" transform="translate(-352.163 -352.163)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_770" data-name="Path 770" d="M171.875,265.625h1.254v.627h-1.254Zm0,0" transform="translate(-168.426 -260.294)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_771" data-name="Path 771" d="M265.625,265.625h1.254v.627h-1.254Zm0,0" transform="translate(-260.294 -260.294)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_772" data-name="Path 772" d="M359.375,265.625h1.254v.627h-1.254Zm0,0" transform="translate(-352.163 -260.294)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_773" data-name="Path 773" d="M656.25,78.125h.627v.941h-.627Zm0,0" transform="translate(-643.08 -76.557)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_774" data-name="Path 774" d="M593.75,78.125h.627v.941h-.627Zm0,0" transform="translate(-581.834 -76.557)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_775" data-name="Path 775" d="M531.25,78.125h.627v.941h-.627Zm0,0" transform="translate(-520.588 -76.557)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_776" data-name="Path 776" d="M468.75,78.125h.627v.941h-.627Zm0,0" transform="translate(-459.343 -76.557)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <path id="Path_777" data-name="Path 777" d="M687.5,812.5h.627v.627H687.5Zm0,0" transform="translate(-673.703 -796.194)" fill="#535353" stroke="#fff" stroke-width="0.2"/>
+    <text id="P" transform="translate(3.815 4)" fill="#f2f2f2" font-size="3" font-family="SegoeUI, Segoe UI"><tspan x="-1.68" y="0">P</tspan></text>
+  </g>
+</svg>

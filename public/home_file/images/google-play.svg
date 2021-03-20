@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="37" viewBox="0 0 118 37">
+  <g id="Group_39661" data-name="Group 39661" transform="translate(-887 -619)">
+    <rect id="Rectangle_7856" data-name="Rectangle 7856" width="118" height="37" rx="4" transform="translate(887 619)" fill="#231f20"/>
+    <g id="Group_3055" data-name="Group 3055" transform="translate(924.37 625.54)">
+      <text id="GET_IT_ON" data-name="GET IT ON" transform="translate(0 6)" fill="#fff" font-size="6" font-family="SFCompactDisplay-Medium, SF Display" font-weight="500"><tspan x="0" y="0">GET IT ON</tspan></text>
+      <text id="Google_Play" data-name="Google Play" transform="translate(0 19.098)" fill="#fff" font-size="12" font-family="SFCompactDisplay-Medium, SF Display" font-weight="500"><tspan x="0" y="0">Google Play</tspan></text>
+    </g>
+    <g id="google-play" transform="translate(865.398 627.728)">
+      <path id="Path_66862" data-name="Path 66862" d="M263.225,169.439l-3.639-2.1-4.985,3.725,4.985,3.725,3.651-2.109a1.891,1.891,0,0,0-.012-3.24Z" transform="translate(-215.547 -160.307)" fill="#ff9100"/>
+      <path id="Path_66863" data-name="Path 66863" d="M40.314,22.977,35.9,28.649l-5.735,4.516A1.915,1.915,0,0,1,29.6,31.8V14.119a1.915,1.915,0,0,1,.567-1.361L35.9,17.306Z" transform="translate(0 -12.222)" fill="#25d9f8"/>
+      <path id="Path_66864" data-name="Path 66864" d="M255.861,218.925l-1.26,1.626V217.3Z" transform="translate(-215.547 -208.169)" fill="#00c0f1"/>
+      <path id="Path_66865" data-name="Path 66865" d="M56.978,7.025l-3.731,3.731L43.1.536a2.843,2.843,0,0,1,.391-.29,1.866,1.866,0,0,1,1.916.038l6.579,3.867Z" transform="translate(-12.933 0)" fill="#7fe881"/>
+      <path id="Path_66866" data-name="Path 66866" d="M259.592,101.674l-3.731,3.731-1.26-1.26V98.8Z" transform="translate(-215.547 -94.649)" fill="#5bc980"/>
+      <path id="Path_66867" data-name="Path 66867" d="M56.978,259.731,51.987,262.6l-6.592,3.848a1.92,1.92,0,0,1-.971.277,1.957,1.957,0,0,1-.933-.252,2.848,2.848,0,0,1-.391-.29L53.247,256Z" transform="translate(-12.933 -245.244)" fill="#ff637b"/>
+      <path id="Path_66868" data-name="Path 66868" d="M259.592,259.731,254.6,262.6V257.26l1.26-1.26Z" transform="translate(-215.547 -245.244)" fill="#e63950"/>
+    </g>
+  </g>
+</svg>
