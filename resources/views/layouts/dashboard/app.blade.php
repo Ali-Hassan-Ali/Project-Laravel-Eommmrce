@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ config('app.name') }}</title>
+    @notifyCss
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <!-- CoreUI CSS -->
@@ -19,7 +20,7 @@
 </head>
 
 <body class="c-app">
-@include('layouts.dashboard.include._sidebar')
+@include('layouts.dashboard.include._sidebar')  
 
 @include('layouts.dashboard.include.partials._session')
 
@@ -53,6 +54,8 @@
 </script>
 
 
-
+@include('notify::messages')
+<x:notify-messages />
+@notifyJs
 </body>
 </html>

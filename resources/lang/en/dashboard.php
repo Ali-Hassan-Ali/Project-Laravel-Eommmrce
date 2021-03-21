@@ -13,6 +13,7 @@ return [
     'yes' => 'Yes',
     'no' => 'No',
     'confirm_delete' 	 => 'Confirm Delete',
+    'no_data_found'     => 'No Data Found',
 
 
 	'users' => 'Users',

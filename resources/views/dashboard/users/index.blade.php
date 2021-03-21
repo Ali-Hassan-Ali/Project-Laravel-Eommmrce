@@ -85,7 +85,7 @@
 
             @else
             
-            <h2>@lang('site.no_data_found')</h2>
+            <h2>@lang('dashboard.no_data_found')</h2>
             
             @endif
         </div>
