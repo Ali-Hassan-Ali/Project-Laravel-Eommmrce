@@ -54,7 +54,7 @@ class UserController extends Controller
             'email' => 'required|unique:users',
             'image' => 'image',
             'password' => 'required|confirmed',
-            // 'permissions' => 'required|min:1'
+            'permissions' => 'required|min:1'
         ]);
 
         $request_data = $request->except(['password', 'password_confirmation', 'permissions', 'image']);
@@ -73,8 +73,8 @@ class UserController extends Controller
         }//end of if
 
         $user = User::create($request_data);
-        // $user->attachRole('admin');
-        // $user->syncPermissions($request->permissions);
+        $user->attachRole('admin');
+        $user->syncPermissions($request->permissions);
 
         session()->flash('success', __('site.added_successfully'));
         return redirect()->route('dashboard.users.index');
@@ -92,8 +92,7 @@ class UserController extends Controller
     function update(Request $request, User $user)
     {
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required',
             'email' => ['required', Rule::unique('users')->ignore($user->id),],
             'image' => 'image',
             'permissions' => 'required|min:1'

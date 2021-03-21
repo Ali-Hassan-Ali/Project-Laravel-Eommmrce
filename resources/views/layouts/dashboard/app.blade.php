@@ -45,56 +45,7 @@
 
 <script src="{{ mix('js/app.js') }}" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.js"></script>
-
-<script>
-    $(document).ready(function () {
-
-        //delete
-        $('.delete').click(function (e) {
-
-            var that = $(this)
-
-            e.preventDefault();
-
-            var n = new Noty({
-                text: "@lang('site.confirm_delete')",
-                type: "warning",
-                killer: true,
-                buttons: [
-                    Noty.button("@lang('site.yes')", 'btn btn-success mr-2', function () {
-                        that.closest('form').submit();
-                    }),
-
-                    Noty.button("@lang('site.no')", 'btn btn-primary mr-2', function () {
-                        n.close();
-                    })
-                ]
-            });
-
-            n.show();
-
-        });//end of delete
-
-        // image preview
-        $(".image").change(function () {
-        
-            if (this.files && this.files[0]) {
-                var reader = new FileReader();
-        
-                reader.onload = function (e) {
-                    $('.image-preview').attr('src', e.target.result);
-                }
-        
-                reader.readAsDataURL(this.files[0]);
-            }
-        
-        });
-
-        CKEDITOR.config.language =  "{{ app()->getLocale() }}";
-
-    });//end of ready
-    
-</script>
+    <script src="{{ asset('dashboard_files/noty.js') }}" defer></script>
 
 @yield('third_party_scri    pts')
 

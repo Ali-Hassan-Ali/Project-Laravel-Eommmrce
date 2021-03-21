@@ -3,14 +3,16 @@
 return [
 
  
-    'add' 	 => 'Add',
+    'add'    => 'Add',
     'edit' 	 => 'Edit',
     'delete' => 'Delete',
     'search' => 'Search',
     'create' => 'create',
     'read' 	 => 'read',
     'update' => 'update',
-    'category' => 'category',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'confirm_delete' 	 => 'Confirm Delete',
 
 
 	'users' => 'Users',

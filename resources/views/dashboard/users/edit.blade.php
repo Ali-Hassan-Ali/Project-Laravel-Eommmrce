@@ -2,53 +2,36 @@
 
 @section('content')
 
-    <div class="content-wrapper">
 
-        <section class="content-header">
+<div class="col-sm-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <strong>@lang('dashboard.edit')</strong>
+        </div>
+        <div class="card-body">
+            <div class="row">
 
-            <h1>@lang('site.users')</h1>
+                <div class="col-sm-12">
 
-            <ol class="breadcrumb">
-                <li><a href="{{ route('dashboard.welcome') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a></li>
-                <li><a href="{{ route('dashboard.users.index') }}"> @lang('site.users')</a></li>
-                <li class="active">@lang('site.edit')</li>
-            </ol>
-        </section>
-
-        <section class="content">
-
-            <div class="box box-primary">
-
-                <div class="box-header">
-                    <h3 class="box-title">@lang('site.edit')</h3>
-                </div><!-- end of box header -->
-
-                <div class="box-body">
-
-                    @include('partials._errors')
 
                     <form action="{{ route('dashboard.users.update', $user->id) }}" method="post" enctype="multipart/form-data">
 
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 
+
                         <div class="form-group">
-                            <label>@lang('site.first_name')</label>
-                            <input type="text" name="first_name" class="form-control" value="{{ $user->first_name }}">
+                            <label>@lang('dashboard.name')</label>
+                            <input type="text" name="name" class="form-control" value="{{ $user->name }}">
                         </div>
 
                         <div class="form-group">
-                            <label>@lang('site.last_name')</label>
-                            <input type="text" name="last_name" class="form-control" value="{{ $user->last_name }}">
-                        </div>
-
-                        <div class="form-group">
-                            <label>@lang('site.email')</label>
+                            <label>@lang('dashboard.email')</label>
                             <input type="email" name="email" class="form-control" value="{{ $user->email }}">
                         </div>
 
                         <div class="form-group">
-                            <label>@lang('site.image')</label>
+                            <label>@lang('dashboard.image')</label>
                             <input type="file" name="image" class="form-control image">
                         </div>
 
@@ -56,54 +39,62 @@
                             <img src="{{ $user->image_path }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
                         </div>
 
-                        <div class="form-group">
-                            <label>@lang('site.permissions')</label>
-                            <div class="nav-tabs-custom">
+
+                    <div class="form-group">
+                        <label>@lang('dashboard.permissions')</label>
 
                                 @php
-                                    $models = ['users', 'categories', 'products', 'clients', 'orders'];
+                                    $models = ['users', 'categories'];
                                     $maps = ['create', 'read', 'update', 'delete'];
                                 @endphp
 
-                                <ul class="nav nav-tabs">
-                                    @foreach ($models as $index=>$model)
-                                        <li class="{{ $index == 0 ? 'active' : '' }}"><a href="#{{ $model }}" data-toggle="tab">@lang('site.' . $model)</a></li>
-                                    @endforeach
-                                </ul>
+                        <div class="col-md-6 mb-4">
 
-                                <div class="tab-content">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">@lang('dashboard.users')</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">@lang('dashboard.dashboard')</a>
+                                </li>
+                            </ul>
 
-                                    @foreach ($models as $index=>$model)
+                            <div class="tab-content pt-3">
+                                <div class="tab-pane active" id="home" role="tabpanel">
 
-                                        <div class="tab-pane {{ $index == 0 ? 'active' : '' }}" id="{{ $model }}">
+                                    <label><input type="checkbox" name="permissions[]" value="users_read"> @lang('dashboard.read')</label>
+                                    <label><input type="checkbox" name="permissions[]" value="users_delete"> @lang('dashboard.create')</label>
+                                    <label><input type="checkbox" name="permissions[]" value="users_create"> @lang('dashboard.update')</label>
+                                    <label><input type="checkbox" name="permissions[]" value="users_update"> @lang('dashboard.delete')</label>
 
-                                            @foreach ($maps as $map)
-                                                {{--create_users--}}
-                                                <label><input type="checkbox" name="permissions[]" {{ $user->hasPermission($map . '_' . $model) ? 'checked' : '' }} value="{{ $map . '_' . $model }}"> @lang('site.' . $map)</label>
-                                            @endforeach
-
-                                        </div>
-
-                                    @endforeach
-
-                                </div><!-- end of tab content -->
-
-                            </div><!-- end of nav tabs -->
-
+                                </div>
+                                <div class="tab-pane" id="profile" role="tabpanel">
+                            
+                                    <label><input type="checkbox" name="permissions[]" value="users_read"> @lang('dashboard.read')</label>
+                                    <label><input type="checkbox" name="permissions[]" value="users_delete"> @lang('dashboard.create')</label>
+                                    <label><input type="checkbox" name="permissions[]" value="users_create"> @lang('dashboard.update')</label>
+                                    <label><input type="checkbox" name="permissions[]" value="users_update"> @lang('dashboard.delete')</label>
+                                    
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i> @lang('site.edit')</button>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> @lang('dashboard.add')</button>
                         </div>
 
                     </form><!-- end of form -->
 
-                </div><!-- end of box body -->
+                </div>
 
-            </div><!-- end of box -->
+            </div>
+            <!--/.row-->
+        </div>
 
-        </section><!-- end of content -->
+    </div>
 
-    </div><!-- end of content wrapper -->
+</div>
 
 @endsection
