@@ -20,7 +20,7 @@ class CreateCartsTable extends Migration
             $table->bigInteger( 'claint_id' );
             $table->bigInteger( 'market_id' )->nullable();
             $table->bigInteger( 'sub_category_id' )->unsigned();
-            $table->integer('count_of_buy');
+            $table->integer('count_of_buy')->nullable();
             $table->integer('ar_price');
             $table->integer('amrecan_price');
             $table->integer('kowit_price');

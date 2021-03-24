@@ -15,7 +15,7 @@ class CreateCuponsTable extends Migration
     {
         Schema::create('cupons', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger( 'claint_id' )->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->string('name');
             $table->string('value');
             $table->timestamps();
