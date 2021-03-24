@@ -17,6 +17,10 @@
     @yield('third_party_stylesheets')
 
     @stack('page_css')
+
+
+    <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/noty/noty.css') }}">
+    <script src="{{ asset('dashboard_files/plugins/noty/noty.min.js') }}"></script>
 </head>
 
 <body class="c-app">
@@ -25,7 +29,7 @@
 @include('layouts.dashboard.include.partials._session')
 
 <div class="c-wrapper">
-    <header class="c-header c-header-light c-header-fixed">
+    <header class="c-header c-header-light ">
         @include('layouts.dashboard.include._header')
     </header>
 
@@ -41,12 +45,8 @@
 
 {{--noty--}}
 
-<link rel="stylesheet" href="{{ asset('dashboard_files/plugins/noty/noty.css') }}">
-<script src="{{ asset('dashboard_files/plugins/noty/noty.min.js') }}"></script>
-
 <script src="{{ mix('js/app.js') }}" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/perfect-scrollbar.js"></script>
-    <script src="{{ asset('dashboard_files/noty.js') }}" defer></script>
 
 @yield('third_party_scri    pts')
 
@@ -57,5 +57,6 @@
 @include('notify::messages')
 <x:notify-messages />
 @notifyJs
+<script src="{{ asset('dashboard_files/noty.js') }}" defer></script>
 </body>
 </html>

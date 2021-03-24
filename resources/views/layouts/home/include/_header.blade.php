@@ -105,11 +105,35 @@
                                             </div>
                                         </ul>
                                     </li>
-                                    <li class="login-btn">
-                                        <img src="{{ asset('home_file/images/icon-user.svg')}}" alt="" />
-                                        <a data-toggle="modal" data-target="#exampleModal">تسجيل الدخول</a>
-                                        <a data-toggle="modal" data-target="#exampleModal">انشاء حساب</a>
-                                    </li>
+                                    @auth
+                                        <li class="login-btn pro-btn dropdown">
+                                            <img src="{{ auth()->user()->image_path }}" alt="">
+                                            <a data-toggle="dropdown" aria-expanded="false">{{ auth()->user()->name }}</a>
+                                            <ul class="dropdown-menu drop-profile multi-level" role="menu" aria-labelledby="dropdownMenu" style="">
+                                                <li><a href="{{ route('profiles.show',auth()->user()->id) }}">حسابي</a></li>
+                                                @if (auth()->user()->hasPermission('dashboard_read'))
+                                                    <li><a href="{{ route('dashboard.welcome') }}">Dashboard</a></li>
+                                                @endif
+                                                <li><a href="cart.html">مشترياتي</a></li>
+                                                <li><a href="ticit-list-supports.html">تذاكر الدعم الفني</a></li>
+
+                                                <li>
+                                                    <a href=""onclick="event.preventDefault(); document.getElementById('logout-form').submit();">تسجيل خروج</a>
+                                                </li>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li class="login-btn">
+                                            <img src="{{ asset('home_file/images/icon-user.svg')}}" alt="" />
+                                            <a data-toggle="modal" data-target="#exampleModal">تسجيل الدخول</a>
+                                            <a data-toggle="modal" data-target="#exampleModal">انشاء حساب</a>
+                                        </li>
+                                    @endauth
+
+
                                 </ul>
                             </div>
                         </div>
@@ -176,18 +200,3 @@
         </header>
         <!--header-->
         
-        <section class="section_home">
-            <div class="container">
-                <div class="home_txt">
-                    <div class="sec-title">
-                        <h2>تسوق بأمان</h2>
-                        <span class="shape-site">مع مجال ستور</span>
-                        <p>هذا نص تجريبي لاختبار شكل و حجم النصوص و طريقة عرضهاi في هذا المكان و حجم و لون الخط
-حيث يتم التحكم في هذا النص وامكانية تغييرة في اي وقت عن طريق ادارة الموقع . يتم اضافة</p>
-                        <a class="btn-site" href=""><span>الشراء السريع</span></a>
-                    </div>
-                    <figure><img src="{{ asset('home_file/images/slide-home.svg')}}" /></figure>
-                </div>
-            </div>
-        </section>
-        <!--section_home-->

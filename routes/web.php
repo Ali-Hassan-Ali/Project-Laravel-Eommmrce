@@ -15,6 +15,11 @@ Route::group(
 
 
         Route::get('/', 'WelcomeController@index')->name('/');
+
+        // user profile
+        Route::resource('profiles', 'ProfileController');
+        Route::post('change.password', 'ProfileController@changePassword')->name('change.password');
+        
        
 
 	});//route group Home

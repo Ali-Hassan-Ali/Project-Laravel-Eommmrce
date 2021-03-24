@@ -22,17 +22,32 @@
 
                         <div class="form-group">
                             <label>@lang('dashboard.name')</label>
-                            <input type="text" name="name" class="form-control" value="{{ old('name') }}">
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" value="{{ old('name') }}">
+                            @if ($errors->has('name'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
                         <div class="form-group">
                             <label>@lang('dashboard.email')</label>
-                            <input type="email" name="email" class="form-control" value="{{ old('email') }}">
+                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ old('email') }}">
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
                         <div class="form-group">
                             <label>@lang('dashboard.image')</label>
-                            <input type="file" name="image" class="form-control image">
+                            <input type="file" name="image" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }} image" value="{{ old('image') }}">
+                            @if ($errors->has('image'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('image') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
                         <div class="form-group">
@@ -41,53 +56,59 @@
 
                         <div class="form-group">
                             <label>@lang('dashboard.password')</label>
-                            <input type="password" name="password" class="form-control" value="{{ old('email') }}">
+                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" value="{{ old('password') }}">
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
                         <div class="form-group">
                             <label>@lang('dashboard.password_confirmation')</label>
-                            <input type="password" name="password_confirmation" class="form-control">
+                            <input type="password" name="password_confirmation" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}">
+                            @if ($errors->has('password_confirmation'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
-                    <div class="form-group">
-                        <label>@lang('dashboard.permissions')</label>
+
+                        <div class="form-group">
+                            <label>@lang('site.permissions')</label>
+                            <div class="nav-tabs-custom">
 
                                 @php
-                                    $models = ['users', 'categories', 'products', 'clients', 'orders'];
+                                    $models = ['users', 'dashboard'];
                                     $maps = ['create', 'read', 'update', 'delete'];
                                 @endphp
 
-                        <div class="col-md-6 mb-4">
+                                <ul class="nav nav-tabs">
+                                    @foreach ($models as $index=>$model)
+                                        <li class="nav-item"><a href="#{{ $model }}" class="nav-link {{ $index == 0 ? 'active' : '' }}" data-toggle="tab">@lang('dashboard.' . $model)</a></li>
+                                    @endforeach
+                                </ul>
 
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">@lang('dashboard.users')</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">@lang('dashboard.dashboard')</a>
-                                </li>
-                            </ul>
+                                <div class="tab-content">
 
-                            <div class="tab-content pt-3">
-                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    @foreach ($models as $index=>$model)
 
-                                    <label><input type="checkbox" name="permissions[]" value="users_read"> @lang('dashboard.read')</label>
-                                    <label><input type="checkbox" name="permissions[]" value="users_delete"> @lang('dashboard.create')</label>
-                                    <label><input type="checkbox" name="permissions[]" value="users_create"> @lang('dashboard.update')</label>
-                                    <label><input type="checkbox" name="permissions[]" value="users_update"> @lang('dashboard.delete')</label>
+                                        <div class="tab-pane {{ $index == 0 ? 'active' : '' }}" id="{{ $model }}">
 
-                                </div>
-                                <div class="tab-pane" id="profile" role="tabpanel">
+                                            @foreach ($maps as $map)
+                                                <label><input type="checkbox" name="permissions[]" value="{{ $model . '_' . $map }}"> @lang('dashboard.' . $map)</label>
+                                            @endforeach
+
+                                        </div>
+
+                                    @endforeach
+
+                                </div><!-- end of tab content -->
+                                
+                            </div><!-- end of nav tabs -->
                             
-                                    <label><input type="checkbox" name="permissions[]" value="users_read"> @lang('dashboard.read')</label>
-                                    <label><input type="checkbox" name="permissions[]" value="users_delete"> @lang('dashboard.create')</label>
-                                    <label><input type="checkbox" name="permissions[]" value="users_create"> @lang('dashboard.update')</label>
-                                    <label><input type="checkbox" name="permissions[]" value="users_update"> @lang('dashboard.delete')</label>
-                                    
-                                </div>
-                            </div>
                         </div>
-                    </div>
 
 
                         <div class="form-group">

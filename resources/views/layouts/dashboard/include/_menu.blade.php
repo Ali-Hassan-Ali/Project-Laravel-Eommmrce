@@ -6,9 +6,11 @@
 
 
 <li class="c-sidebar-nav-item mt-1">
-    <a class="c-sidebar-nav-link c-active" href="{{ route('dashboard.users.index') }}">
-        <i class="c-sidebar-nav-icon cil-user"></i> @lang('menu.users')
-    </a>
+	@if (auth()->user()->hasPermission('users_read'))
+	    <a class="c-sidebar-nav-link c-active" href="{{ route('dashboard.users.index') }}">
+	        <i class="c-sidebar-nav-icon cil-user"></i> @lang('menu.users')
+	    </a>
+    @endif
 </li>
 
 <li class="c-sidebar-nav-item mt-1">

@@ -3,6 +3,7 @@
 return [
 
  
+    'dashboard' => 'الرئسيه',
     'add' => 'اضافه',
     'edit' => 'تعديل',
     'delete' => 'حذف',
@@ -23,13 +24,8 @@ return [
     'password' => 'كلمه المرور',
     'password_confirmation' => 'اعاده كلمه المرور',
     'permissions' => 'الصلاحيات',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
+    'Laravel' => 'لارفل',
+
 
   
 ];

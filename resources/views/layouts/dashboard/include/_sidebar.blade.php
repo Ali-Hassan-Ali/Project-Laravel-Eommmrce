@@ -1,4 +1,4 @@
-<div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+<div class="c-sidebar c-sidebar-dark c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand d-md-down-none">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Boomerang_tv_logo.png/758px-Boomerang_tv_logo.png" width="46"
              class="c-sidebar-brand-full" alt="Brand Logo">

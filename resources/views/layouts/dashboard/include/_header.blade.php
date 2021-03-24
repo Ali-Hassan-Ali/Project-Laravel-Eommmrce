@@ -3,7 +3,7 @@
     <i class="c-icon c-icon-lg cil-menu"></i>
 </button>
 <a class="c-header-brand d-lg-none c-header-brand-sm-up-center" href="#">
-    <img src="https://infyom.com/images/logo/logo_236w.png" width="118" alt="Brand Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Boomerang_tv_logo.png/758px-Boomerang_tv_logo.png" width="118" alt="Brand Logo">
 </a>
 <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
         data-class="c-sidebar-lg-show" responsive="true">
@@ -11,7 +11,7 @@
 </button>
 <ul class="c-header-nav mfs-auto">
 </ul>
-<ul class="c-header-nav">
+<ul class="c-header-nav mx-3">
     <li class="c-header-nav-item dropdown">
         <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button"
            aria-haspopup="true" aria-expanded="false">
@@ -21,16 +21,15 @@
            </p>
              
         </a>
-        <div class="dropdown-menu dropdown-menu-right pt-0">
+        <div class="dropdown-menu dropdown-menu-right pt-0 pb-0">
             
-            <ul >
+            <ul class="p-0 mb-0">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <li class="dropdown-item">
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                             
-                             {{ $properties['native'] }}
-                        </a>
-                    </li>
+
+                    <a rel="alternate" class="dropdown-item" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        <i class="c-icon mfe-2 cil-account-logout"></i>{{ $properties['native'] }}
+                    </a>
+
                 @endforeach
             </ul>
         </div>
@@ -43,7 +42,7 @@
                 <img class="c-avatar-img" src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
             </div>
         </a>
-        <div class="dropdown-menu dropdown-menu-right pt-0">
+        <div class="dropdown-menu dropdown-menu-right pt-0 pb-0">
             <div class="dropdown-header bg-light py-2"><strong>Account</strong></div>
             <a class="dropdown-item" href="#">
                 <i class="c-icon mfe-2 cil-user"></i>@lang('menu.profile')

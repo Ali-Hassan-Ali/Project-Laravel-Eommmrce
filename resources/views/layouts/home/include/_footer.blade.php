@@ -76,60 +76,75 @@
                                 <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">إنشاء حساب</a>
                             </li>
                         </ul>
-                        <form class="form-reg">
+
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-envelope"></i> البريد الالكتروني</label>
-                                        <input type="email" class="form-control" placeholder="البريد الالكتروني" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-lock"></i>كلمة المرور</label>
-                                        <input type="email" class="form-control" placeholder="كلمة المرور" />
-                                        <a class="forgot-pass">هل نسيت كلمة المرور؟</a>
-                                    </div> 
-                                    <div class="form-group text-center">
-                                        <button class="btn-shop"><span>تسجيل الدخول</span></button>
-                                    </div>
-                                    <div class="nt-account text-center">
-                                        <p>لا تملك حساب؟ <a>أنشئ حسابك الآن!</a></p>
-                                    </div>
-                                    <b class="or-shape">أو</b>
-                                    <ul class="list-social">
-                                        <li><a><i class="fa fa-google"></i></a></li>
-                                        <li><a><i class="fa fa-facebook"></i></a></li>
-                                        <li><a><i class="fa fa-twitter"></i></a></li>
-                                    </ul>
+                                    <form action="{{ route('login') }}" method="post"  class="form-reg">
+
+                                        {{ csrf_field() }}
+                                        {{ method_field('post') }}
+
+                                        <div class="form-group">
+                                            <label><i class="fa fa-envelope"></i> البريد الالكتروني</label>
+                                            <input type="email" name="email" class="form-control" placeholder="البريد الالكتروني" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label><i class="fa fa-lock"></i>كلمة المرور</label>
+                                            <input type="password" name="password" class="form-control" placeholder="كلمة المرور" />
+                                            <a class="forgot-pass">هل نسيت كلمة المرور؟</a>
+                                        </div> 
+                                        <div class="form-group text-center">
+                                            <button class="btn-shop"><span>تسجيل الدخول</span></button>
+                                        </div>
+                                        <div class="nt-account text-center">
+                                            <p>لا تملك حساب؟ <a>أنشئ حسابك الآن!</a></p>
+                                        </div>
+                                        <b class="or-shape">أو</b>
+                                        <ul class="list-social">
+                                            <li><a><i class="fa fa-google"></i></a></li>
+                                            <li><a><i class="fa fa-facebook"></i></a></li>
+                                            <li><a><i class="fa fa-twitter"></i></a></li>
+                                        </ul>
+                                    </form>
                                 </div>
                                 <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-user"></i> الاسم كاملا</label>
-                                        <input type="text" class="form-control" placeholder="الاسم كاملا" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-envelope"></i> البريد الالكتروني</label>
-                                        <input type="email" class="form-control" placeholder="البريد الالكتروني" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-phone"></i> رقم الجوال</label>
-                                        <input type="number" class="form-control" placeholder="رقم الجوال" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-lock"></i>كلمة المرور</label>
-                                        <input type="email" class="form-control" placeholder="كلمة المرور" />
-                                    </div> 
-                                    <div class="form-group text-center">
-                                        <button class="btn-shop"><span>إنشاء حساب</span></button>
-                                    </div>
-                                    <div class="nt-account text-center">
-                                        <p>هل لديك حساب بالفعل؟ <a>تسجيل دخول</a></p>
-                                    </div>
-                                    <b class="or-shape">أو</b>
-                                    <ul class="list-social">
-                                        <li><a><i class="fa fa-google"></i></a></li>
-                                        <li><a><i class="fa fa-facebook"></i></a></li>
-                                        <li><a><i class="fa fa-twitter"></i></a></li>
-                                    </ul>
+
+                                    <form action="{{ route('register') }}" method="post">
+
+                                        {{ csrf_field() }}
+                                        {{ method_field('post') }}
+
+                                        <div class="form-group">
+                                            <label><i class="fa fa-user"></i> الاسم كاملا</label>
+                                            <input type="text" name="name" class="form-control" placeholder="الاسم كاملا" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label><i class="fa fa-envelope"></i> البريد الالكتروني</label>
+                                            <input type="email" name="email" class="form-control" placeholder="البريد الالكتروني" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label><i class="fa fa-lock"></i>كلمة المرور</label>
+                                            <input type="password" name="password" class="form-control" placeholder="كلمة المرور" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label><i class="fa fa-lock"></i>كلمة المرور</label>
+                                            <input type="password" name="password_confirmation" class="form-control" placeholder="كلمة المرور" />
+                                        </div> 
+                                        <div class="form-group text-center">
+                                            <button class="btn-shop"><span>إنشاء حساب</span></button>
+                                        </div>
+                                        <div class="nt-account text-center">
+                                            <p>هل لديك حساب بالفعل؟ <a>تسجيل دخول</a></p>
+                                        </div>
+                                        <b class="or-shape">أو</b>
+                                        <ul class="list-social">
+                                            <li><a><i class="fa fa-google"></i></a></li>
+                                            <li><a><i class="fa fa-facebook"></i></a></li>
+                                            <li><a><i class="fa fa-twitter"></i></a></li>
+                                        </ul>
+
+                                    </form>
+
                                 </div>
                             </div>
                         </form>

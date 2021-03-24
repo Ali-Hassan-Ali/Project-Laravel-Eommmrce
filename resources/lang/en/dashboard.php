@@ -3,6 +3,7 @@
 return [
 
  
+    'dashboard'    => 'Dashboard',
     'add'    => 'Add',
     'edit' 	 => 'Edit',
     'delete' => 'Delete',
@@ -23,14 +24,7 @@ return [
     'password' => 'Password',
     'password_confirmation' => 'Password Confirmation',
     'permissions' => 'Permissions',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
-    'edit' => '',
+    'Laravel' => 'Laravel',
+
 
 ];

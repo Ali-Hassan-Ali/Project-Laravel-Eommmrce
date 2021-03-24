@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
+
+    public function __construct()
+    {
+        //create read update delete
+        $this->middleware(['permission:dashboard_read'])->only('index');
+    }//end of constructor
+
     public function index()
     {
     	return view('dashboard.welcome');

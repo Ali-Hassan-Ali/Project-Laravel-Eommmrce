@@ -9,17 +9,20 @@
     
     <!-- Stylesheets -->
 
-        <link href="{{ asset('home_file/css/material-design-iconic-font.css')}}" rel="stylesheet">
-        <link href="{{ asset('home_file/css/font-awesome.css')}}" rel="stylesheet">
-        <link href="{{ asset('home_file/css/owl.carousel.min.css')}}" rel="stylesheet">
-        <link href="{{ asset('home_file/css/owl.theme.default.min.css')}}" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
-        <link href="{{ asset('home_file/css/animate.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('home_file/images/logo.svg') }}" rel="icon">
+
+    <link href="{{ asset('home_file/css/material-design-iconic-font.css')}}" rel="stylesheet">
+    <link href="{{ asset('home_file/css/font-awesome.css')}}" rel="stylesheet">
+    <link href="{{ asset('home_file/css/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('home_file/css/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
+    <link href="{{ asset('home_file/css/animate.css')}}" rel="stylesheet" type="text/css" />
 
     @if (app()->getLocale() == 'ar')
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
-        <link href="{{ asset('home_file/styleRTL.css')}}" rel="stylesheet">
+        <!-- <link href="{{ asset('home_file/styleRTL.css')}}" rel="stylesheet"> -->
+        <link href="{{ asset('home_file/css/style.css')}}" rel="stylesheet">
     
     @else
         <link href="{{ asset('home_file/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -87,8 +90,8 @@
                     </li>
                     <li class="login-btn">
                         <img src="{{ asset('home_file/images/icon-user.svg')}}" alt="" />
-                        <a data-toggle="modal" data-target="#exampleModal">تسجيل الدخول</a>
-                        <a data-toggle="modal" data-target="#exampleModal">انشاء حساب</a>
+                        <a data-toggle="modal" data-target="#examplemodal">تسجيل الدخول</a>
+                        <a data-toggle="modal" data-target="#loginModal">انشاء حساب</a>
                     </li>
                 </ul>
             </div>
@@ -107,6 +110,9 @@
     <!--section_download_app-->
                 
     @include('layouts.home.include._footer') 
+
+    
+
         
     </div>
     <!--main-wrapper--> 
@@ -119,6 +125,22 @@
     
     <script>
         new WOW().init();
+        
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function() {
+            readURL(this);
+        });
+        
     </script>
     
 </body>

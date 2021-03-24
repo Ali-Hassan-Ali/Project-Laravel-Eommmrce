@@ -49,6 +49,7 @@ class UserController extends Controller
     public
     function store(Request $request)
     {
+        //dd($request->all());
         $request->validate([
             'name' => 'required',
             'email' => 'required|unique:users',
@@ -77,8 +78,6 @@ class UserController extends Controller
         $user->syncPermissions($request->permissions);
 
         notify()->success('Laravel Notify is awesome!');
-
-        // session()->flash('success', __('site.added_successfully'));
         return redirect()->route('dashboard.users.index');
 
     }//end of store
@@ -125,7 +124,6 @@ class UserController extends Controller
         $user->syncPermissions($request->permissions);
 
         notify()->success('Laravel Notify is awesome!');
-        // session()->flash('success', __('site.updated_successfully'));
         return redirect()->route('dashboard.users.index');
 
     }//end of update

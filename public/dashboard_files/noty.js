@@ -25,15 +25,15 @@ $('.delete').click(function (e) {
     e.preventDefault();
 
     var n = new Noty({
-        text: "@lang('dashboard.confirm_delete')",
+        text: "Confirm Delete",
         type: "warning",
         killer: true,
         buttons: [
-            Noty.button("@lang('dashboard.name)", 'btn btn-success mr-2', function () {
+            Noty.button("Yes", 'btn btn-success mr-2', function () {
                 that.closest('form').submit();
             }),
 
-            Noty.button("@lang('dashboard.no')", 'btn btn-primary mr-2', function () {
+            Noty.button("No", 'btn btn-primary mr-2', function () {
                 n.close();
             })
         ]
