@@ -80,7 +80,7 @@
                             <div class="nav-tabs-custom">
 
                                 @php
-                                    $models = ['users', 'dashboard'];
+                                    $models = ['users', 'parent_categorys','sub_categories','carts'];
                                     $maps = ['create', 'read', 'update', 'delete'];
                                 @endphp
 

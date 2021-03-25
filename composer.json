@@ -16,7 +16,8 @@
         "laravel/tinker": "^1.0",
         "mcamara/laravel-localization": "^1.6",
         "mckenziearts/laravel-notify": "1.*",
-        "santigarcor/laratrust": "^6.3"
+        "santigarcor/laratrust": "^6.3",
+        "spatie/laravel-translatable": "^4.6"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

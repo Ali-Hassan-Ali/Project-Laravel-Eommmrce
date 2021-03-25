@@ -14,8 +14,12 @@ return [
     'roles_structure' => [
 
         'super_admin' => [
-            'dashboard' => 'r',
-            'users' => 'c,r,u,d',
+            'dashboard'        => 'r',
+            'users'            => 'c,r,u,d',
+            'parent_categorys' => 'c,r,u,d',
+            'sub_categories'   => 'c,r,u,d',
+            'carts'            => 'c,r,u,d',
+            'markets'            => 'c,r,u,d',
         ],
 
         'admin' => [

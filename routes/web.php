@@ -19,6 +19,7 @@ Route::group(
         // user profile
         Route::resource('profiles', 'ProfileController');
         Route::post('change.password', 'ProfileController@changePassword')->name('change.password');
+
       
 
 	});//route group Home

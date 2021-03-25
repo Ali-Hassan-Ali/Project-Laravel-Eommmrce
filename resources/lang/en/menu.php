@@ -8,5 +8,7 @@ return [
     'about' => 'about me ',
     'profile' => 'profile ',
     'logout' => 'logout ',
+    'parent_category' => 'Parent Category',
+    'sup_category' => 'Sub Category',
 
 ];
