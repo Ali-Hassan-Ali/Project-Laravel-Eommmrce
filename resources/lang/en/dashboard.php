@@ -50,5 +50,10 @@ return [
     'kowit_price'   => 'Kowit Price',
     'amarat_price'  => 'Amarat Price',
     
+    'cupons'  => 'Cupons',
+    'value'   => 'Value',
+
+
+
 
 ];

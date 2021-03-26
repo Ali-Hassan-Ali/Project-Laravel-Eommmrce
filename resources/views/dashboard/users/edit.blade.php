@@ -59,7 +59,7 @@
                             <div class="nav-tabs-custom">
 
                                 @php
-                                    $models = ['users', 'parent_categorys', 'sub_categories', 'carts'];
+                                    $models = ['users', 'cupons','categories', 'sub_categories', 'carts'];
                                     $maps = ['create', 'read', 'update', 'delete'];
                                 @endphp
 
@@ -77,7 +77,13 @@
 
                                             @foreach ($maps as $map)
                                                 {{--create_users--}}
-                                                <label><input type="checkbox" name="permissions[]" {{ $user->hasPermission($model . '_' . $map) ? 'checked' : '' }} value="{{ $model . '_' . $map }}"> @lang('dashboard.' . $map)</label>
+                                                <label><input type="checkbox" class="form-control{{ $errors->has('permissions') ? ' is-invalid' : '' }}" name="permissions[]" {{ $user->hasPermission($model . '_' . $map) ? 'checked' : '' }} value="{{ $model . '_' . $map }}"> @lang('dashboard.' . $map)
+                                                    @if ($errors->has('permissions'))
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $errors->first('c') }}</strong>
+                                                        </span>
+                                                    @endif
+                                                </label>
                                             @endforeach
 
                                         </div>

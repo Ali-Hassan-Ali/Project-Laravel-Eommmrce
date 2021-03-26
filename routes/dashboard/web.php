@@ -10,6 +10,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
             //user routes
             Route::resource('users', 'UserController')->except(['show']);
 
+            //cupons routs
+            Route::resource('cupons', 'CuponController')->except(['show']);
+
             //parent_category routs
             Route::resource('parent_category', 'ParentCategoryController')->except(['show']);
 		
