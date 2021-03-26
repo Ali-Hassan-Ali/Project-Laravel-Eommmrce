@@ -10,16 +10,6 @@
         </div>
         <div class="card-body">
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-
             <div class="row">
 
                 <div class="col-sm-12">
@@ -43,7 +33,7 @@
 
                         <div class="form-group">
                             <label>@lang('dashboard.name_en')</label>
-                            <input type="text" name="name_en" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" value="{{ old('name_en') }}">
+                            <input type="text" name="name_en" class="form-control{{ $errors->has('name_en') ? ' is-invalid' : '' }}" value="{{ old('name_en') }}">
                             @if ($errors->has('name_en'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('name_en') }}</strong>

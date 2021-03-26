@@ -23,20 +23,20 @@
 
                         <div class="form-group">
                             <label>@lang('dashboard.name')</label>
-                            <input type="text" name="cart_name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" value="{{ old('name') }}">
-                            @if ($errors->has('name'))
+                            <input type="text" name="cart_name" class="form-control{{ $errors->has('cart_name') ? ' is-invalid' : '' }}" value="{{ old('cart_name') }}">
+                            @if ($errors->has('cart_name'))
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('name') }}</strong>
+                                    <strong>{{ $errors->first('cart_name') }}</strong>
                                 </span>
                             @endif
                         </div>
 
                         <div class="form-group">
                             <label>@lang('dashboard.name_en')</label>
-                            <input type="text" name="cart_name_en" class="form-control{{ $errors->has('name_en') ? ' is-invalid' : '' }}" value="{{ old('name_en') }}">
-                            @if ($errors->has('name_en'))
+                            <input type="text" name="cart_name_en" class="form-control{{ $errors->has('cart_name_en') ? ' is-invalid' : '' }}" value="{{ old('cart_name_en') }}">
+                            @if ($errors->has('cart_name_en'))
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('name_en') }}</strong>
+                                    <strong>{{ $errors->first('cart_name_en') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -62,12 +62,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label>@lang('dashboard.market')</label>
+                            <label>@lang('dashboard.markets')</label>
                             <select name="market_id" class="form-control">
-                           
-                           
                             @foreach ($markets as $market)
-                                <option value="{{ $market->id }}"> {{ $market->name }}</option>
+                                <option value="{{ $market->id }}" > {{ $market->name }}</option>
                             @endforeach
                             </select>
                         </div>
@@ -76,8 +74,6 @@
                         <div class="form-group">
                             <label>@lang('dashboard.sub_categories')</label>
                             <select name="sub_category_id" class="form-control">
-                           
-                           
                             @foreach ($sub_categorys as $sub_category)
                                 <option value="{{ $sub_category->id }}"> {{ $sub_category->name }}</option>
                             @endforeach

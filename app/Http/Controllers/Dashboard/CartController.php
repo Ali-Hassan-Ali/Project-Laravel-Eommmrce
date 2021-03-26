@@ -28,7 +28,12 @@ class CartController extends Controller
         $carts = Cart::when($request->search, function ($q) use ($request) {
 
             // return $q->HasTranslations('name', '%' . $request->search . '%');
-            return $q->where('name', 'like', '%' . $request->search . '%');
+            return $q->where('users_id', 'like', '%' . $request->search . '%')
+                ->orWhere('sub_category_id', 'like', '%' . $request->search . '%')
+                ->orWhere('ar_price', 'like', '%' . $request->search . '%')
+                ->orWhere('amarat_price', 'like', '%' . $request->search . '%')
+                ->orWhere('kowit_price', 'like', '%' . $request->search . '%')
+                ->orWhere('cart_text', 'like', '%' . $request->search . '%');
 
         })->latest()->paginate(10);
 
@@ -65,6 +70,7 @@ class CartController extends Controller
 
 
             $carts->save();
+            // dd($carts);    
             // dd($carts);
 
             notify()->success('Laravel Notify is awesome!');
@@ -92,6 +98,24 @@ class CartController extends Controller
         
         try {
 
+        // dd($request->all())
+            ;
+            $cart->update([
+
+                'cart_name.'      => ['ar'=> $request->cart_name,'en'=> $request->cart_name_en],
+                'cart_text.'      => ['ar'=> $request->cart_text,'en'=> $request->cart_text_en],
+                'users_id'        => auth()->user()->id,
+                'market_id'       => $request->market_id,
+                'sub_category_id' => $request->sub_category_id,
+                'count_of_buy'    => $request->count_of_buy,
+                'ar_price'        => $request->ar_price,
+                'amrecan_price'   => $request->amrecan_price,
+                'kowit_price'     => $request->kowit_price,
+                'amarat_price'    => $request->amarat_price,
+            ]);
+
+            notify()->success('Laravel Notify is awesome!');
+            return redirect()->route('dashboard.carts.index');
 
         } catch (\Exception $e) {
             return redirect()->back()->withErrors(['error' => $e->getMessage()]);

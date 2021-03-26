@@ -9,6 +9,17 @@
             <strong>@lang('dashboard.edit')</strong>
         </div>
         <div class="card-body">
+
+                    @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        
             <div class="row">
 
                 <div class="col-sm-12">
@@ -22,10 +33,10 @@
 
                          <div class="form-group">
                             <label>@lang('dashboard.name')</label>
-                            <input type="text" name="cart_name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" value="{{ $cart->getTranslation('cart_name', 'ar') }}">
-                            @if ($errors->has('name'))
+                            <input type="text" name="cart_name" class="form-control{{ $errors->has('cart_name') ? ' is-invalid' : '' }}" value="{{ $cart->getTranslation('cart_name', 'ar') }}">
+                            @if ($errors->has('cart_name'))
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $errors->first('name') }}</strong>
+                                    <strong>{{ $errors->first('cart_name') }}</strong>
                                 </span>
                             @endif
                         </div>
@@ -62,11 +73,15 @@
 
                         <div class="form-group">
                             <label>@lang('dashboard.markets')</label>
-                            <select name="market_id" class="form-control">
-                           
+                            <select name="market_id" class="form-control{{ $errors->has('market_id') ? ' is-invalid' : '' }}">
+                            @if ($errors->has('market_id'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('market_id') }}</strong>
+                                </span>
+                            @endif
                            
                             @foreach ($markets as $market)
-                                <option value="{{ $market->id }}"> {{ $market->name }}</option>
+                                <option value="{{ $market->id }}" {{ $cart->market_id == $market->id ? 'selected' : '' }}> {{ $market->name }}</option>
                             @endforeach
                             </select>
                         </div>
@@ -74,11 +89,15 @@
 
                         <div class="form-group">
                             <label>@lang('dashboard.sub_categories')</label>
-                            <select name="sub_category_id" class="form-control">
-                           
+                            <select name="sub_category_id" class="form-control{{ $errors->has('sub_category_id') ? ' is-invalid' : '' }}">
+                            @if ($errors->has('sub_category_id'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('sub_category_id') }}</strong>
+                                </span>
+                            @endif
                            
                             @foreach ($sub_categorys as $sub_category)
-                                <option value="{{ $sub_category->id }}"> {{ $sub_category->name }}</option>
+                                <option value="{{ $sub_category->id }}" {{ $cart->sub_category_id == $sub_category->id ? 'selected' : '' }}> {{ $sub_category->name }}</option>
                             @endforeach
                             </select>
                         </div>
@@ -96,7 +115,7 @@
                         <div class="form-group">
                             <label>@lang('dashboard.ar_price')</label>
                             <input type="number" name="ar_price" class="form-control{{ $errors->has('ar_price') ? ' is-invalid' : '' }}" value="{{ $cart->ar_price }}">
-                            @if ($errors->has('count_of_buy'))
+                            @if ($errors->has('ar_price'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('ar_price') }}</strong>
                                 </span>
@@ -106,7 +125,7 @@
                         <div class="form-group">
                             <label>@lang('dashboard.amrecan_price')</label>
                             <input type="number" name="amrecan_price" class="form-control{{ $errors->has('amrecan_price') ? ' is-invalid' : '' }}" value="{{ $cart->amrecan_price }}">
-                            @if ($errors->has('count_of_buy'))
+                            @if ($errors->has('amrecan_price'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('amrecan_price') }}</strong>
                                 </span>
@@ -116,7 +135,7 @@
                         <div class="form-group">
                             <label>@lang('dashboard.kowit_price')</label>
                             <input type="number" name="kowit_price" class="form-control{{ $errors->has('kowit_price') ? ' is-invalid' : '' }}" value="{{ $cart->kowit_price }}">
-                            @if ($errors->has('count_of_buy'))
+                            @if ($errors->has('kowit_price'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('kowit_price') }}</strong>
                                 </span>
@@ -126,7 +145,7 @@
                         <div class="form-group">
                             <label>@lang('dashboard.amarat_price')</label>
                             <input type="number" name="amarat_price" class="form-control{{ $errors->has('amarat_price') ? ' is-invalid' : '' }}" value="{{ $cart->amarat_price }}">
-                            @if ($errors->has('count_of_buy'))
+                            @if ($errors->has('amarat_price'))
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('amarat_price') }}</strong>
                                 </span>

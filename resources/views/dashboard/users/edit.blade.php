@@ -77,13 +77,7 @@
 
                                             @foreach ($maps as $map)
                                                 {{--create_users--}}
-                                                <label><input type="checkbox" class="form-control{{ $errors->has('permissions') ? ' is-invalid' : '' }}" name="permissions[]" {{ $user->hasPermission($model . '_' . $map) ? 'checked' : '' }} value="{{ $model . '_' . $map }}"> @lang('dashboard.' . $map)
-                                                    @if ($errors->has('permissions'))
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $errors->first('c') }}</strong>
-                                                        </span>
-                                                    @endif
-                                                </label>
+                                                <label><input type="checkbox" name="permissions[]" {{ $user->hasPermission($model . '_' . $map) ? 'checked' : '' }} value="{{ $model . '_' . $map }}"> @lang('dashboard.' . $map)</label>
                                             @endforeach
 
                                         </div>

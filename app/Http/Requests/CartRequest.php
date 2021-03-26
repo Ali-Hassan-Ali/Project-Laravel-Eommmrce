@@ -19,8 +19,8 @@ class CartRequest extends FormRequest
     public function rules()
     {
         return [
-            'cart_name'            => 'required',
-            'cart_name_en'         => 'required',
+            'cart_name'       => 'required',
+            'cart_name_en'    => 'required',
             'cart_text'       => 'required',
             'cart_text_en'    => 'required',
             'market_id'       => 'required',
@@ -36,8 +36,8 @@ class CartRequest extends FormRequest
     public function messages()
     {
         return [
-            'cart_name.required'            => trans('validation.required'),
-            'cart_name_en.required'         => trans('validation.required'),
+            'cart_name.required'       => trans('validation.required'),
+            'cart_name_en.required'    => trans('validation.required'),
             'cart_text.required'       => trans('validation.required'),
             'cart_text_en.required'    => trans('validation.required'),
             'market_id.required'       => trans('validation.required'),

@@ -147,7 +147,20 @@ return [
     */
 
     'attributes' => [
-        'name' => 'name',
+        'name'          => 'name',
+        'image'         => 'image',
+        'name_en'       => 'name english',
+        'Password'      => 'Password',
+        'value'         => 'value',
+        'cart_name'     => 'cart name',
+        'cart_name_en'  => 'cart name english',
+        'cart_text'     => 'description arbic',
+        'cart_text_en'  => 'description english',
+        'count_of_buy'  => 'count of buy',
+        'ar_price'      => 'arblic price',
+        'amrecan_price' => 'amrecan price',
+        'kowit_price'   => 'kowit price',
+        'amarat_price'  => 'amarat price'',
     ],
 
 ];

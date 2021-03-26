@@ -71,7 +71,7 @@ class ParentCategoryController extends Controller
 
     
 
-    public function update(Request $request, parent_category $parent_category)
+    public function update(ParentCategory $request, parent_category $parent_category)
     {
         $parent_categories = $request->all();
 

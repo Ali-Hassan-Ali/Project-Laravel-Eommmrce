@@ -94,16 +94,8 @@ class SubCategoryController extends Controller
     }//end of edit
 
 
-    public function update(Request $request, Sub_Category $sub_category)
+    public function update(SubCategory $request, Sub_Category $sub_category)
     {
-
-        $request->validate([
-            'name' => 'required',
-            'name_en' => 'required',
-            'color1' => 'required',
-            'color2' => 'required',
-            'image' => 'image',
-        ]);
         
         try {
             if ($request->image) {
