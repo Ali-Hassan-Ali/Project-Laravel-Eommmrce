@@ -38,12 +38,14 @@ return [
     'categories_name_sub_ar' => 'Sub Categories Arbic',
     'categories_name_sub_en' => 'Sub Categories English',
 
-    'carts' => 'Carts',
+    'carts'        => 'Carts',
+    'cart_name'    => 'Carts name arblic',
+    'cart_name_en' => 'Carts name english',
 
     'markets'       => 'Markets',
     'cart_text'     => 'Description',
     'cart_text_en'  => 'Description English',
-    'market_id'      => 'User Name',
+    'market_id'     => 'User Name',
     'count_of_buy'  => 'Count Buyers',
     'ar_price'      => 'Price Arbic',
     'amrecan_price' => 'Amrecan Price',

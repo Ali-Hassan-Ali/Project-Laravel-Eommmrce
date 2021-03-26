@@ -22,7 +22,7 @@
 
 
                         <div class="form-group">
-                            <label>@lang('dashboard.name')</label>
+                            <label>@lang('dashboard.cart_name')</label>
                             <input type="text" name="cart_name" class="form-control{{ $errors->has('cart_name') ? ' is-invalid' : '' }}" value="{{ old('cart_name') }}">
                             @if ($errors->has('cart_name'))
                                 <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>@lang('dashboard.name_en')</label>
+                            <label>@lang('dashboard.cart_name_en')</label>
                             <input type="text" name="cart_name_en" class="form-control{{ $errors->has('cart_name_en') ? ' is-invalid' : '' }}" value="{{ old('cart_name_en') }}">
                             @if ($errors->has('cart_name_en'))
                                 <span class="invalid-feedback" role="alert">
